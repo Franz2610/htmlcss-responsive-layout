@@ -1,0 +1,151 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colorheader: #0084fd;
+    --dark: #333333;
+    --bodycolor: #ffffff;
+    --bgcard: #b5ddff;
+    --contrastcolor: #fcc060;
+    --colorsection: #9792e4;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:  'PT Sans', sans-serif;
+}
+.container{
+    padding: 35px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+.textcenter{
+    text-align: center;
+}
+
+/* Header */
+header{
+    background-color: var(--colorheader);
+    color: var(--bodycolor);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    display: none;
+}
+.fa-bars{
+    color: var(--bodycolor);
+}
+
+/* Main */
+main{
+    margin-top: 70px;
+}
+.even{
+    background-color: var(--colorsection);
+}
+
+.card{
+    background-color: var(--bgcard);
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.card .image{
+    max-width: 100%;
+}
+
+.even .image{
+    max-width: 100%;
+}
+
+.planningright{
+    background-color: var(--bodycolor);
+    border-radius: 20px;
+}
+.planningleft{
+    color: var(--bodycolor);
+    justify-content: start;
+}
+
+/* Footer */
+footer{
+    background-color: var(--dark);
+    color: var(--bodycolor);
+}
+
+
+/* Responsive */
+
+@media  screen and (min-width: 768px) {
+    .d-flex{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+    }
+    header  nav ul{
+        display: flex;
+    }
+    header nav a{
+        color: var(--bodycolor);
+        padding-right: 10px;
+        text-decoration: none;
+    }
+    header nav .fa-bars{
+        display: none;
+    }
+    .d-flex-nowrap{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 10px;
+        padding: 20px;
+    }
+    .space{
+        justify-items: space-between;
+    }
+    #intro .image{
+        margin-bottom: -25px;
+    }
+    #intro .card{
+        width: calc((100% / 3) - 10px);
+    }
+    #intro .card:first-child{
+        width: calc((100% / 3 * 2) - 10px);
+    }
+    .even .planningright{
+        width: calc((100% / 2) - 10px);
+        height: 30vw;
+        margin-top: 250px;
+    }
+    .even .planningright .image{
+        position: relative;
+        height: 50%;
+    }
+    .even .planningleft{
+        width: calc((100% / 2) - 10px);
+        padding: 50px;
+        margin-top: 50px;
+    }
+    .even p{
+        margin-top: 60px;
+    }
+    .even .planningleft .image{
+        height: 50%;
+    }
+}
