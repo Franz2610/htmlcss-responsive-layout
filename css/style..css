@@ -37,7 +37,15 @@ ul{
 .marg-b20{
     margin-bottom: 20px;
 }
-
+.textw{
+    color: var(--bodycolor);
+}
+.textl{
+    color: var(--colorsection);
+}
+.texy{
+    color: #fcc060;
+}
 /* Header */
 header{
     background-color: var(--colorheader);
@@ -66,6 +74,13 @@ button{
     color: var(--bodycolor);
     background-color: var(--colorsection);
 }
+.arrow{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--dark);
+    background-color: var(--colorsection);
+}
 .btn{
     display: inline-block;
     padding: 6px 10px;
@@ -81,6 +96,22 @@ button{
     color: var(--bodycolor);
     background-color: var(--colorheader);
 }
+.btn-w{
+    display: inline-block;
+    padding: 16px 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    color: var(--colorsection);
+    background-color: var(--bodycolor);
+    padding-bottom: 20px;
+}
+.bigtext{
+    font-size: 3rem;
+}
+.icone{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
 
 /* Main */
 main{
@@ -94,6 +125,7 @@ main{
     background-color: var(--bgcard);
     border-radius: 20px;
     margin-bottom: 10px;
+    padding: 20px;
 }
 #intro .card .image{
     max-width: 100%;
@@ -228,6 +260,7 @@ footer{
         flex-flow: row wrap;
         justify-content: center;
         gap: 10px;
+        align-items: center;
     }
     .planningright{
         width: calc((100% / 2) - 10px);
@@ -257,5 +290,8 @@ footer{
     }
     #features .card{
         width: calc((100% / 3) - 10px);
+    }
+    #testimonials .icone{
+        font-size: 30px;
     }
 }
